@@ -1,11 +1,24 @@
-# 1 - 2 -3 -5 gibi
 
-a=1
-b=1
-c=0
-while c<1000:
-    print(b)
-    c= a+b
-    a=b
-    b=c
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+
+fibonacci_liste = [] 
+i = 0 
+while True: 
+    fib = fibonacci(i) 
+    if fib > 1000: 
+        break 
+    fibonacci_liste.append(fib) 
+    i += 1 
+
+
+print("0 ile 1000 arasındaki Fibonacci sayıları:")
+for sayi in fibonacci_liste:
+    print(sayi)
 
